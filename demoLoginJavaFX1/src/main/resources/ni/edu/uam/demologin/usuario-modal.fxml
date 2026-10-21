@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="400" prefWidth="800" spacing="15" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="ni.edu.uam.demologin.controller.UsuarioModalController">
+    <Label fx:id="tableview" />
+
+    <HBox alignment="CENTER_LEFT" spacing="10">
+        <Label text="Busqueda: " />
+        <TextField fx:id="txtParametro" HBox.hgrow="ALWAYS" />
+        <Button onAction="#buscar" style="-fx-background-color: green; -fx-text-fill: white; -fx-font-weight: bold;" text="BUSCAR" />
+    </HBox>
+
+    <TableView fx:id="Usuarios" prefHeight="350" prefWidth="800">
+        <columns>
+            <TableColumn fx:id="colID" prefWidth="100" text="ID" />
+            <TableColumn fx:id="colNombre" prefWidth="100" text="Nombre" />
+            <TableColumn fx:id="colApellido" prefWidth="100" text="Apellido" />
+            <TableColumn fx:id="colCorreo" prefWidth="100" text="Correo" />
+            <TableColumn fx:id="colUsuario" prefWidth="100" text="Usuario" />
+            <TableColumn fx:id="colPassword" prefWidth="100" text="Contraseña" />
+            <TableColumn fx:id="colRutaFoto" prefWidth="100" text="Ruta Foto" />
+        </columns>
+    </TableView>
+
+    <HBox alignment="CENTER" prefHeight="0.0" prefWidth="800.0" spacing="10">
+        <Button onAction="#abrirRegistro" style="-fx-background-color: purple; -fx-text-fill: white; -fx-font-weight: bold;" text="NUEVO USUAIO" />
+        <Button onAction="#abrirEditor" style="-fx-background-color: blue; -fx-text-fill: white; -fx-font-weight: bold;" text="EDITAR" />
+        <Button onAction="#eliminar" style="-fx-background-color: red; -fx-text-fill: white; -fx-font-weight: bold;" text="ELIMINAR" />
+        <Button onAction="#regresar" style="-fx-background-color: yellow; -fx-text-fill: black; -fx-font-weight: bold;" text="REGRESAR" />
+    </HBox>
+
+
+</VBox>

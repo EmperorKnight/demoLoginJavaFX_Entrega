@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="ni.edu.uam.demologin.controller.LoginController"
+            prefHeight="400.0" prefWidth="600.0">
+    <VBox alignment="CENTER"
+          spacing="15"
+          prefWidth="400"
+          prefHeight="450"
+
+          AnchorPane.topAnchor="0"
+          AnchorPane.bottomAnchor="0"
+          AnchorPane.leftAnchor="0"
+          AnchorPane.rightAnchor="0"
+    >
+        <padding>
+            <Insets
+                top="30"
+                right="40"
+                bottom="30"
+                left="40"/>
+        </padding>
+
+        <Label text="INICIAR SESION"
+               style="-fx-font-size: 24px;
+                      -fx-font-width: bold;"/>
+
+        <Label text="Usuario"/>
+        <TextField fx:id="txtUsuario"
+                   promptText="Ingrese su Usuario"/>
+        <Label text="Contraseña"/>
+        <PasswordField fx:id="txtPassword"
+                   promptText="Ingrese su Contraseña"/>
+
+        <Button text="INICIAR SESION"
+                onAction="#iniciarSesion"
+                prefWidth="200"/>
+        <Label text="¿No tienes una cuenta?"/>
+        <Hyperlink text="Registrarse"
+                   onAction="#abrirRegistro"/>
+    </VBox>
+</AnchorPane>
