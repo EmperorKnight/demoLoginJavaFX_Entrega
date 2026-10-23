@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="ni.edu.uam.demologin.controller.PedidosController"
+      alignment="CENTER"
+      spacing="20"
+      prefWidth="500"
+      prefHeight="350">
+
+    <padding>
+        <Insets top="30" right="30"
+                bottom="30" left="30"/>
+    </padding>
+
+    <Label text="PROCESAMIENTO DE PEDIDOS"
+           style="-fx-font-size: 22px;
+                  -fx-font-weight: bold;"/>
+
+    <Label text="Progreso del procesamiento:"/>
+
+    <ProgressBar fx:id="barraProgreso"
+                 progress="0.0"
+                 prefWidth="380"/>
+
+    <Label fx:id="lblContador"
+           text="0 / 30"/>
+
+    <HBox alignment="CENTER" spacing="10">
+
+        <Button fx:id="btnIniciar"
+                text="INICIAR"
+                prefWidth="120"
+                onAction="#iniciarPedidos"
+                style="-fx-background-color: green;
+                       -fx-text-fill: white;"/>
+
+        <Button fx:id="btnCancelar"
+                text="CANCELAR"
+                prefWidth="120"
+                disable="true"
+                onAction="#cancelarPedidos"
+                style="-fx-background-color: red;
+                       -fx-text-fill: white;"/>
+
+    </HBox>
+
+    <Label text="Estado actual:"/>
+
+    <Label fx:id="lblEstado"
+           text="Listo"
+           style="-fx-font-size: 16px;
+                  -fx-font-weight: bold;"/>
+
+</VBox>

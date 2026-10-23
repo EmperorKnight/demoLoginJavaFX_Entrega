@@ -1,35 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" prefHeight="400" prefWidth="800" spacing="15" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="ni.edu.uam.demologin.controller.UsuarioModalController">
-    <Label fx:id="tableview" />
+<VBox xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="ni.edu.uam.demologin.controller.UsuarioModalController"
+      alignment="CENTER"
+      prefHeight="500"
+      prefWidth="950"
+      spacing="15">
+    <padding>
+        <Insets top="20" right="20"
+                bottom="20" left="20"/>
+    </padding>
+
+    <Label fx:id="tableview"
+           visible="false"
+           managed="false"/>
+
+    <Label text="GESTIÓN DE USUARIOS"
+           style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
 
     <HBox alignment="CENTER_LEFT" spacing="10">
-        <Label text="Busqueda: " />
-        <TextField fx:id="txtParametro" HBox.hgrow="ALWAYS" />
-        <Button onAction="#buscar" style="-fx-background-color: green; -fx-text-fill: white; -fx-font-weight: bold;" text="BUSCAR" />
+
+        <Label text="Búsqueda:"/>
+
+        <TextField fx:id="txtParametro"
+                   HBox.hgrow="ALWAYS"/>
+
+        <Button text="BUSCAR"
+                onAction="#buscar"
+                style="-fx-background-color: green;
+                       -fx-text-fill: white;
+                       -fx-font-weight: bold;"/>
+
     </HBox>
 
-    <TableView fx:id="Usuarios" prefHeight="350" prefWidth="800">
+    <TableView fx:id="Usuarios"
+               prefHeight="350"
+               prefWidth="900"
+               VBox.vgrow="ALWAYS">
+
         <columns>
-            <TableColumn fx:id="colID" prefWidth="100" text="ID" />
-            <TableColumn fx:id="colNombre" prefWidth="100" text="Nombre" />
-            <TableColumn fx:id="colApellido" prefWidth="100" text="Apellido" />
-            <TableColumn fx:id="colCorreo" prefWidth="100" text="Correo" />
-            <TableColumn fx:id="colUsuario" prefWidth="100" text="Usuario" />
-            <TableColumn fx:id="colPassword" prefWidth="100" text="Contraseña" />
-            <TableColumn fx:id="colRutaFoto" prefWidth="100" text="Ruta Foto" />
+
+            <TableColumn fx:id="colID"
+                         prefWidth="120"
+                         text="ID"/>
+
+            <TableColumn fx:id="colNombre"
+                         prefWidth="120"
+                         text="Nombre"/>
+
+            <TableColumn fx:id="colApellido"
+                         prefWidth="120"
+                         text="Apellido"/>
+
+            <TableColumn fx:id="colCorreo"
+                         prefWidth="170"
+                         text="Correo"/>
+
+            <TableColumn fx:id="colUsuario"
+                         prefWidth="120"
+                         text="Usuario"/>
+
+            <TableColumn fx:id="colPassword"
+                         prefWidth="120"
+                         text="Contraseña"/>
+
+            <TableColumn fx:id="colRutaFoto"
+                         prefWidth="120"
+                         text="Ruta Foto"/>
+
         </columns>
+
     </TableView>
 
-    <HBox alignment="CENTER" prefHeight="0.0" prefWidth="800.0" spacing="10">
-        <Button onAction="#abrirRegistro" style="-fx-background-color: purple; -fx-text-fill: white; -fx-font-weight: bold;" text="NUEVO USUAIO" />
-        <Button onAction="#abrirEditor" style="-fx-background-color: blue; -fx-text-fill: white; -fx-font-weight: bold;" text="EDITAR" />
-        <Button onAction="#eliminar" style="-fx-background-color: red; -fx-text-fill: white; -fx-font-weight: bold;" text="ELIMINAR" />
-        <Button onAction="#regresar" style="-fx-background-color: yellow; -fx-text-fill: black; -fx-font-weight: bold;" text="REGRESAR" />
-    </HBox>
+    <HBox alignment="CENTER" spacing="10">
 
+        <Button text="NUEVO USUARIO"
+                onAction="#abrirRegistro"
+                style="-fx-background-color: purple;
+                       -fx-text-fill: white;
+                       -fx-font-weight: bold;"/>
+
+        <Button text="EDITAR"
+                onAction="#abrirEditor"
+                style="-fx-background-color: blue;
+                       -fx-text-fill: white;
+                       -fx-font-weight: bold;"/>
+
+        <Button text="ELIMINAR"
+                onAction="#eliminar"
+                style="-fx-background-color: red;
+                       -fx-text-fill: white;
+                       -fx-font-weight: bold;"/>
+
+        <Button text="PROCESAR PEDIDOS"
+                onAction="#abrirPedidos"
+                style="-fx-background-color: green;
+                       -fx-text-fill: white;
+                       -fx-font-weight: bold;"/>
+
+        <Button text="REGRESAR"
+                onAction="#regresar"
+                style="-fx-background-color: yellow;
+                       -fx-text-fill: black;
+                       -fx-font-weight: bold;"/>
+
+    </HBox>
 
 </VBox>
