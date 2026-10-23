@@ -5,9 +5,9 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class PostgreSQLConnection implements IConnection {
-    private static final String URL = "jdbc:postgresql://localhost:5432/ejemplo";
-    private static final String usuario = "postgres";
-    private static final String password = "bdserver1234";
+    private static final String URL = "jdbc:postgresql://localhost:5432/"; // Falta el nombre de su base de datos
+    private static final String usuario = ""; //Su usario
+    private static final String password = ""; //Su contraseña
 
     @Override
     public Connection getConnection()  {
